@@ -1,3 +1,8 @@
-odwroc()  bez self to w klasie MLista?
-
+odwroc()  bez self to w klasie MLista?  odwraca ale nie wyswietla dopiero pisz
+zwieksz pojemnosc(x)  czy moze byc self
 tylko liczby jako elementy?
+czy MLista class moze dziedziczyc po jakiejs klasie?
+
+
+usun powtorzenia(x)
+czy wszystkie  powinno byc podaj wartosc /element

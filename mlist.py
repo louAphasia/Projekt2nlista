@@ -18,30 +18,47 @@ class MLista(list):
     def dodaj_element(self, x):
         if self.capacity>len(self.elementy):
             self.elementy.append(x)
+            return True
         else:
             print( "blad")
-        return self.elementy
+        return False
 
     def znajdz(self, x):
-        pass
+        if x in self.elementy:
+            MLista.index(x)
+        else:
+            -1
 
     def pobierz(self, x):
-        pass
+        if x> self.capacity:
+            return self.elementy[x]
 
 
 
     def pojemnosc(self):
-        pass
+        return self.capacity
 
 
     def usun_powtorzenia(self,x):
         pass
 
-    #def odwroc():
-      #  pass
+    def odwroc(self):
+        return MLista.reverse(self.elementy)
 
-    def zwieksz_pojemnosc(x):
-        pass
 
-    def zmniejsz_pojemnosc(x):
-        pass
+
+    def zwieksz_pojemnosc(self,x):
+        if x>=0:
+            self.capacity=self.capacity+x
+            return True
+        else:
+            print("Wystapil blad")
+            return False
+
+    def zmniejsz_pojemnosc(self,x):
+        if self.capacity-x<len(self.elementy):
+            self.capacity=self.capacity-x
+            return True
+        else:
+            print("Wystapil blad")
+            return False

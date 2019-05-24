@@ -15,7 +15,7 @@ def main():
             lista.pisz()
 
         elif polecenie == "de":
-            element=input(" Podaj wartosc elementu: ")
+            element=int(input(" Podaj wartosc elementu: "))
             lista.dodaj_element(element)
 
 
@@ -24,17 +24,26 @@ def main():
         elif polecenie == "pobierz":
             pass
         elif polecenie == "rozmiar":
-            lista.rozmiar()
+            print(lista.rozmiar())
+
         elif polecenie == "pojemnosc":
-            pass
+            print(lista.pojemnosc())
+
         elif polecenie == "usun":
-            pass
+            element=int(input( " Podaj którego elementu powtorzenia maja byc usuniete "))
+            if element in lista:
+                pass
+
+
         elif polecenie == "odwroc":
-            pass
+            lista.odwroc()
+
         elif polecenie == "zwieksz":
-            pass
+            x=int(input( "Podaj wartosc"))
+
         elif polecenie == "zmniejsz":
             pass
+
         elif polecenie == "wyjscie":
             break
         else:
