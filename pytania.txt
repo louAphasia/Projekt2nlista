@@ -1,0 +1,3 @@
+odwroc()  bez self to w klasie MLista?
+
+tylko liczby jako elementy
