@@ -1,8 +1,8 @@
-class MLista(list):
+class MLista():  # dziedziczy po list class ?
 
     def __init__(self, capacity):
-        self.capacity=capacity
-        self.elementy=[]
+        self.capacity = capacity
+        self.elementy = []
 
     def rozmiar(self):
         size=int()
@@ -11,7 +11,7 @@ class MLista(list):
         return size
 
     def pisz(self):
-        print("Rozmiar aktualny listy:", MLista.rozmiar(self))
+        print("Rozmiar aktualny listy:", self.rozmiar(self))  # self.elementy.rozmiar(self) MLista.rozmiar(self)
         print(" Pojemnosc listy : ",self.capacity)
         print("Elementy: " , self.elementy)
 
@@ -25,9 +25,9 @@ class MLista(list):
 
     def znajdz(self, x):
         if x in self.elementy:
-            MLista.index(x)
+            return self.elementy.index(x)  #MLista.index(x)
         else:
-            -1
+            return -1
 
     def pobierz(self, x):
         if x> self.capacity:
@@ -43,7 +43,7 @@ class MLista(list):
         pass
 
     def odwroc(self):
-        return MLista.reverse(self.elementy)
+        return self.elementy.reverse()   #MLista.reverse(self.elementy)
 
 
 
