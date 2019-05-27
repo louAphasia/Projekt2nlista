@@ -11,7 +11,7 @@ class MLista():  # dziedziczy po list class ?
         return size
 
     def pisz(self):
-        print("Rozmiar aktualny listy:", self.rozmiar(self))  # self.elementy.rozmiar(self) MLista.rozmiar(self)
+        print("Rozmiar aktualny listy:", MLista.rozmiar(self))  # self.elementy.rozmiar(self) MLista.rozmiar(self)
         print(" Pojemnosc listy : ",self.capacity)
         print("Elementy: " , self.elementy)
 
@@ -25,13 +25,15 @@ class MLista():  # dziedziczy po list class ?
 
     def znajdz(self, x):
         if x in self.elementy:
-            return self.elementy.index(x)  #MLista.index(x)
+            return self.elementy.index(x)  #MLista.index(x)  a jesli wiecej to wszystkie indeksy for
         else:
             return -1
 
     def pobierz(self, x):
-        if x> self.capacity:
+        if x< self.capacity:
             return self.elementy[x]
+        else:
+            print("Nie ma takiego indeksu")
 
 
 
@@ -40,7 +42,13 @@ class MLista():  # dziedziczy po list class ?
 
 
     def usun_powtorzenia(self,x):
-        pass
+       pass
+
+
+
+
+
+    # lista.remove(x) usuwa pierwszy a tu w tresci pierwszy ma pominac
 
     def odwroc(self):
         return self.elementy.reverse()   #MLista.reverse(self.elementy)
@@ -52,13 +60,12 @@ class MLista():  # dziedziczy po list class ?
             self.capacity=self.capacity+x
             return True
         else:
-            print("Wystapil blad")
+            #print("Wystapil blad")
             return False
 
     def zmniejsz_pojemnosc(self,x):
-        if self.capacity-x<len(self.elementy):
+        if self.capacity-x>len(self.elementy):
             self.capacity=self.capacity-x
             return True
         else:
-            print("Wystapil blad")
             return False

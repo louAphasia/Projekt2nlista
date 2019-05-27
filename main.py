@@ -18,11 +18,14 @@ def main():
             element=int(input(" Podaj wartosc elementu: "))
             lista.dodaj_element(element)
 
-
         elif polecenie == "znajdz":
-            pass
+             element=int(input("Podaj którego elementu indeks chcesz znaleźć "))
+             print(lista.znajdz(element))
+
         elif polecenie == "pobierz":
-            pass
+             index=int(input(" Podaj indeks którego element chcesz pobirac "))
+             print(lista.pobierz(index))
+
         elif polecenie == "rozmiar":
             print(lista.rozmiar())
 
@@ -31,8 +34,7 @@ def main():
 
         elif polecenie == "usun":
             element=int(input( " Podaj którego elementu powtorzenia maja byc usuniete "))
-            if element in lista:
-                pass
+            lista.usun_powtorzenia(element)
 
 
         elif polecenie == "odwroc":
@@ -40,9 +42,11 @@ def main():
 
         elif polecenie == "zwieksz":
             x=int(input( "Podaj wartosc"))
+            print(lista.zwieksz_pojemnosc(x))
 
         elif polecenie == "zmniejsz":
-            pass
+            x = int(input("Podaj wartosc"))
+            print(lista.zmniejsz_pojemnosc(x))
 
         elif polecenie == "wyjscie":
             break

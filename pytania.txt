@@ -4,5 +4,10 @@ tylko liczby jako elementy?
 czy MLista class moze dziedziczyc po jakiejs klasie?
 
 
+ZNAJDZ() szukany element ale pozycja na liscie wszystkie czy tylko pierwsza?
+
 usun powtorzenia(x)
 czy wszystkie  powinno byc podaj wartosc /element
+
+
+zweiksz pojemnosc(x) tylko x bez self i czy powinna uzytkownikowi zwrocic czy po prostu na ekranie
