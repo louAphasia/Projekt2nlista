@@ -41,10 +41,17 @@ class MLista():  # dziedziczy po list class ?
         return self.capacity
 
 
-    def usun_powtorzenia(self,x):
-       pass
+    def usun_powtorzenia(self,x):  #check
 
-
+        indices = [i for i, a in enumerate(self.elementy) if a == x]
+        print(indices)
+        for x in indices[1:]:
+            self.elementy[x] = 'del'
+            newlist = []
+            for x in self.elementy:
+                if x != 'del':
+                    newlist.append(x)
+        return newlist
 
 
 
