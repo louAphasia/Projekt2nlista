@@ -11,3 +11,6 @@ czy wszystkie  powinno byc podaj wartosc /element
 
 
 zweiksz pojemnosc(x) tylko x bez self i czy powinna uzytkownikowi zwrocic czy po prostu na ekranie
+
+pojemnosc gdy podamy ujemna wyjatek rzucic
+10 TESTY ujemna capacity konstruktor
