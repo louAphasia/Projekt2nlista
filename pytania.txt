@@ -14,3 +14,5 @@ zweiksz pojemnosc(x) tylko x bez self i czy powinna uzytkownikowi zwrocic czy po
 
 pojemnosc gdy podamy ujemna wyjatek rzucic
 10 TESTY ujemna capacity konstruktor
+
+while na poczatku jak wpisze ujemne
