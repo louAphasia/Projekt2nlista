@@ -1,12 +1,13 @@
 from mlist import MLista
 
 def main():
+    while True:
+        capacity=int(input( " Podaj początkowy rozmiar listy " ))
+        if capacity>=0:
+            break
 
-    capacity=int(input( " Podaj początkowy rozmiar listy " ))
 
     lista=MLista(capacity)
-
-
 
     while True:
         polecenie = input("Wybierz pol (pisz, de, znajdz, pobierz, rozmiar, pojemnosc,"
@@ -15,16 +16,16 @@ def main():
             lista.pisz()
 
         elif polecenie == "de":
-            element=int(input(" Podaj wartosc elementu: "))
-            lista.dodaj_element(element)
+             element=int(input(" Podaj wartosc elementu: "))
+             lista.dodaj_element(element)
 
         elif polecenie == "znajdz":
-             element=int(input("Podaj którego elementu indeks chcesz znaleźć "))
-             print(lista.znajdz(element))
+            element=int(input("Podaj którego elementu indeks chcesz znaleźć "))
+            print(lista.znajdz(element))
 
         elif polecenie == "pobierz":
-             index=int(input(" Podaj indeks którego element chcesz pobirac "))
-             print(lista.pobierz(index))
+            index=int(input(" Podaj indeks którego element chcesz pobirac "))
+            print(lista.pobierz(index))
 
         elif polecenie == "rozmiar":
             print(lista.rozmiar())
@@ -35,7 +36,6 @@ def main():
         elif polecenie == "usun":
             element=int(input( " Podaj którego elementu powtorzenia maja byc usuniete "))
             lista.usun_powtorzenia(element)
-
 
         elif polecenie == "odwroc":
             lista.odwroc()
@@ -52,15 +52,6 @@ def main():
             break
         else:
             print("Bledne polecenie ")
-
-
-
-
-
-    print(lista.rozmiar())
-
-
-
 
 
 

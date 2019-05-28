@@ -1,8 +1,8 @@
 class MLista():  # dziedziczy po list class ?
 
     def __init__(self, capacity):
-        self.capacity = capacity
-        self.elementy = []
+            self.capacity = capacity
+            self.elementy = []
 
     def rozmiar(self):
         size=int()
