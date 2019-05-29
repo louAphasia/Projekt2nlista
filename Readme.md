@@ -1,45 +1,58 @@
-# Project Name
-> Here goes your awesome project description!
+# PROJEKT 2
 
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-
-* [Contact](#contact)
-
-## General info
-Add more general information about project. What the purpose of the project is? Motivation?
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-
-## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
+Klasa o nazwie 'MLista' posiada następujące metody:
+ * konstruktor(self, capacity) z parametrem określającym pojemność listy (liczbę elementów jaką maksymalnie może przechować),
+ * pisz(self), która wypisuje informacje o liście, w tym jej aktualny rozmiar, pojemność oraz przechowywane elementy;
+   Elementy listy wypisujemy tak:
+dla pustej listy: Elementy: []
+dla listy z czterema elementami: Elementy: [2, 1, 6, 78]
+ * dodaj_element(self, x), która dodaje element x do listy pod warunkiem, że nie zostanie przekroczona jej pojemność; gdy element zostanie dodany funkcja powinna zwrócić True, w przeciwnym wypadku False
+ * znajdz(self, x), której jedynym parametrem powinien być szukany element, natomiast wynikiem pozycja danego elementu w liście (licząc od 0) lub -1, gdy liczby nie ma na liście
+ * pobierz(self, x) zwracającą element listy o indeksie x
+ * rozmiar(self) zwracającą aktualną liczbę elementów,
+ * pojemnosc(self) zwracającą aktualną pojemność listy,
+ * usun_powtorzenia(self, x), która usuwa wszystkie powtórzenia danego elementu na liście, tzn. po jej wykonaniu na liście powinien być tylko pierwszy w kolejności element x
 
 
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
+## Getting Started
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Prerequisites
 
-## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+What things you need to install the software and how to install them
+
+```
+pip pycodestyle
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
 
 
 
-## Status
-Project is: _in progress_, _finished_,
+
+
+## Running the tests
+
+
+```
+python -m unittest discover
+```
 
 
 
-## Contact
-Created by lou
+## Versioning
+
+We use Python 3.7
+
+## Authors
+
+* **Ula Lukierska WSB II rok Informatyki * 
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
