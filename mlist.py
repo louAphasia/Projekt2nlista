@@ -13,8 +13,8 @@ class MLista():
         return size
 
     def pisz(self):
-        print("Rozmiar aktualny listy:", MLista.rozmiar(self))
-        print("Pojemnosc listy : ", self.capacity)
+        print("Rozmiar aktualny listy: ", MLista.rozmiar(self))
+        print("Pojemnosc listy: ", self.capacity)
         print("Elementy: ", self.elementy)
 
     def dodaj_element(self, x):
@@ -47,10 +47,8 @@ class MLista():
         self.elementy = [p for p in self.elementy if p != 'del']
         return self.elementy
 
-    # lista.remove(x) usuwa pierwszy a tu w tresci pierwszy ma pominac
-
     def odwroc(self):
-        return self.elementy.reverse()  # MLista.reverse(self.elementy)
+        return self.elementy.reverse()
 
     def zwieksz_pojemnosc(self, x):
         if x >= 0:
@@ -68,5 +66,5 @@ class MLista():
 
 
 class InvalidCapacity(ValueError):
-    def __init__(self, msg):  # msg napis opisujacy co sie stalo
+    def __init__(self, msg):
         super().__init__(msg)
