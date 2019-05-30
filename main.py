@@ -13,8 +13,10 @@ def main():
             continue
 
     while True:
-        polecenie = input("Wybierz polecenie (pisz, dodaj_element, znajdz, pobierz, rozmiar, pojemnosc,"
-                          " usun_powtorzenia, odwroc, zwieksz_pojemnosc, zmniejsz_pojemnosc, wyjscie): ")
+        polecenie = input("Wybierz polecenie (pisz, dodaj_element, znajdz, "
+                          "pobierz, rozmiar, pojemnosc, usun_powtorzenia, "
+                          "odwroc, zwieksz_pojemnosc, zmniejsz_pojemnosc,"
+                          " wyjscie): ")
         if polecenie == "pisz":
             lista.pisz()
 
@@ -24,19 +26,16 @@ def main():
                 print(lista.dodaj_element(element))
             except ValueError:
                 print('Mozna wpisac tylko Integers')
-
-
-
         elif polecenie == "znajdz":
             try:
-                element = int(input("Podaj którego elementu indeks chcesz znaleźć "))
+                element = int(input("Podaj element "))
                 print(lista.znajdz(element))
             except ValueError:
                 print('Mozna wpisac tylko Integers')
 
         elif polecenie == "pobierz":
             try:
-                index = int(input(" Podaj indeks którego element chcesz pobirac "))
+                index = int(input(" Podaj indeks elementu"))
                 print(lista.pobierz(index))
             except ValueError:
                 print('Mozna wpisac tylko Integers')
@@ -49,7 +48,7 @@ def main():
 
         elif polecenie == "usun_powtorzenia":
             try:
-                element = int(input(" Podaj którego elementu powtorzenia maja byc usuniete "))
+                element = int(input(" Podaj element "))
                 lista.usun_powtorzenia(element)
             except ValueError:
                 print('Mozna wpisac tylko Integers')
@@ -59,7 +58,7 @@ def main():
 
         elif polecenie == "zwieksz_pojemnosc":
             try:
-                x = int(input( "Podaj wartosc "))
+                x = int(input("Podaj wartosc "))
                 print(lista.zwieksz_pojemnosc(x))
             except ValueError:
                 print('Mozna wpisac tylko Integers')

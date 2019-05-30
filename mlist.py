@@ -1,12 +1,10 @@
-class MLista():  # dziedziczy po list class ?
-
+class MLista():
     def __init__(self, capacity):
-        if capacity>=0:
+        if capacity >= 0:
             self.capacity = capacity
             self.elementy = []
         else:
-            raise InvalidCapacity("negative capacity prosze wpisac pojemnosc Nieujemna")
-
+            raise InvalidCapacity("prosze wpisac pojemnosc Nieujemna")
 
     def rozmiar(self):
         size = int()
@@ -15,7 +13,7 @@ class MLista():  # dziedziczy po list class ?
         return size
 
     def pisz(self):
-        print("Rozmiar aktualny listy:", MLista.rozmiar(self))  # self.elementy.rozmiar(self) MLista.rozmiar(self)
+        print("Rozmiar aktualny listy:", MLista.rozmiar(self))
         print("Pojemnosc listy : ", self.capacity)
         print("Elementy: ", self.elementy)
 
@@ -28,7 +26,7 @@ class MLista():  # dziedziczy po list class ?
 
     def znajdz(self, x):
         if x in self.elementy:
-            return self.elementy.index(x)  # MLista.index(x)  a jesli wiecej to wszystkie indeksy for
+            return self.elementy.index(x)
         else:
             return -1
 
@@ -44,12 +42,9 @@ class MLista():  # dziedziczy po list class ?
     def usun_powtorzenia(self, x):
 
         indices = [i for i, a in enumerate(self.elementy) if a == x]
-        print(indices)
         for x in indices[1:]:
             self.elementy[x] = 'del'
-        print(self.elementy)
         self.elementy = [p for p in self.elementy if p != 'del']
-        print(self.elementy)
         return self.elementy
 
     # lista.remove(x) usuwa pierwszy a tu w tresci pierwszy ma pominac
